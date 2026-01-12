@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience & Certifications | CCC&E</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --tech-turquoise: #00f2ff;
+      --tech-dark: #0f172a;
+      --tech-bg: #f8fafc;
+      --bubble-radius: 40px;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--tech-bg);
+      color: var(--tech-dark);
+      margin: 0;
+      padding-top: 80px;
+      line-height: 1.6;
+    }
+
+    /* --- INDESTRUCTIBLE NAVBAR --- */
+    #final-nav-shell {
+      position: fixed !important;
+      top: 0 !important; left: 0 !important; width: 100% !important;
+      height: 80px !important; background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(12px); z-index: 9999999 !important;
+      border-bottom: 2px solid #eee;
+    }
+    .final-nav-bar {
+      max-width: 1200px; height: 100%; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; padding: 0 25px;
+    }
+    .final-logo-img { height: 42px; width: auto; }
+    .final-nav-desktop { display: flex; align-items: center; gap: 30px; }
+    .final-nav-desktop a { text-decoration: none; color: #000; font-weight: 700; font-size: 14px; }
+    .final-bubble-link {
+      background: var(--tech-dark); color: #fff !important;
+      padding: 10px 25px; border-radius: 50px;
+    }
+    .final-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .final-hamburger span { width: 25px; height: 3px; background: #000; border-radius: 2px; }
+
+    /* --- TURQUOISE GRAND HERO --- */
+    .grand-hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #083344 0%, #0e7490 50%, #22d3ee 100%);
+      color: white;
+      border-radius: 0 0 var(--bubble-radius) var(--bubble-radius);
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grand-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    .grand-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- BUBBLY CONTENT CARDS --- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+    .cert-card {
+      background: #ffffff;
+      padding: 50px;
+      border-radius: var(--bubble-radius);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      border: 1px solid rgba(0,0,0,0.02);
+      transition: transform 0.3s ease;
+    }
+    .cert-card:hover { transform: translateY(-5px); }
+
+    .cert-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .cert-header i {
+      font-size: 3rem;
+      color: #0891b2;
+    }
+
+    .cert-header h2 {
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: -1px;
+    }
+
+    /* Pill-Shaped Bubbly List */
+    .pill-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pill-list li {
+      background: #ecfeff;
+      padding: 12px 24px;
+      border-radius: 50px;
+      border: 1px solid #cffafe;
+      font-weight: 700;
+      font-size: 14px;
+      color: #0e7490;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    /* Mobile Menu Drawer */
+    #final-mobile-drawer {
+      position: fixed; top: 80px; left: 0; width: 100%;
+      background: #ffffff; display: none;
+      flex-direction: column; z-index: 999999;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    #final-mobile-drawer a { padding: 20px; text-align: center; text-decoration: none; color: #000; font-weight: 800; border-bottom: 1px solid #eee; }
+
+    @media (max-width: 1024px) {
+      .final-nav-desktop { display: none; }
+      .final-hamburger { display: flex; }
+      .grand-hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="final-nav-shell">
+    <div class="final-nav-bar">
+        <div class="final-nav-logo">
+            <a href="1home.html"><img src="LOGO-image.PNG" alt="Logo" class="final-logo-img"></a>
+        </div>
+        <div class="final-nav-desktop">
+            <a href="1home.html">Home</a>
+            <a href="2about.html">About</a>
+            <a href="4services.html">Services</a>
+            <a href="3articles.html">Articles</a>
+            <a href="4support.html" class="final-bubble-link">Contact Expert</a>
+        </div>
+        <div class="final-hamburger" onclick="toggleNavMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <div id="final-mobile-drawer">
+        <a href="1home.html">Home</a>
+        <a href="2about.html">About</a>
+        <a href="4services.html">Services</a>
+        <a href="3articles.html">Articles</a>
+    </div>
+</nav>
+
+<header class="grand-hero">
+  <h1>TECHNICAL EXPERTISE</h1>
+  <p>Validated mastery in Cybersecurity, Network Architecture, and Enterprise Infrastructure Design.</p>
+</header>
+
+<div class="container">
+  
+  <section class="cert-card">
+    <div class="cert-header">
+      <i class="fas fa-shield"></i>
+      <div>
+        <h2>Cybersecurity Specialist</h2>
+        <small style="color:#0891b2; font-weight:bold; text-transform:uppercase;">Security+ Powered Expertise</small>
+      </div>
+    </div>
+    <p>Focused on the proactive defense of organizational assets. This specialization covers the essential principles of network security and risk management.</p>
+    <ul class="pill-list">
+      <li>Threat Intelligence & Hunting</li>
+      <li>Vulnerability Management</li>
+      <li>Identity & Access Management (IAM)</li>
+      <li>Cryptography & PKI</li>
+      <li>Incident Response & Recovery</li>
+      <li>Cloud Security Operations</li>
+    </ul>
+  </section>
+
+  <section class="cert-card">
+    <div class="cert-header">
+      <i class="fas fa-network-wired"></i>
+      <div>
+        <h2>CIT CCNA Certification</h2>
+        <small style="color:#0891b2; font-weight:bold; text-transform:uppercase;">Cisco Certified Network Associate</small>
+      </div>
+    </div>
+    <p>Comprehensive knowledge of network fundamentals, IP connectivity, and security service implementation within Cisco environments.</p>
+    <ul class="pill-list">
+      <li>IP Connectivity & Routing</li>
+      <li>VLANs & Spanning Tree (STP)</li>
+      <li>OSPF & Dynamic Routing</li>
+      <li>WLAN Configuration (Wireless)</li>
+      <li>Network Automation & Programmability</li>
+      <li>IP Services (DHCP, NAT, QoS)</li>
+    </ul>
+  </section>
+
+  <section class="cert-card">
+    <div class="cert-header">
+      <i class="fas fa-server"></i>
+      <div>
+        <h2>Network Associate</h2>
+        <small style="color:#0891b2; font-weight:bold; text-transform:uppercase;">Foundational Infrastructure</small>
+      </div>
+    </div>
+    <p>General mastery of data networking concepts, hardware troubleshooting, and the foundational layers of the OSI model.</p>
+    <ul class="pill-list">
+      <li>OSI & TCP/IP Model Mastery</li>
+      <li>Ethernet & Switching Logic</li>
+      <li>IPv4 & IPv6 Subnetting</li>
+      <li>Hardware Installation & Maintenance</li>
+      <li>Network Performance Monitoring</li>
+      <li>Standard Security Protocols</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer style="text-align:center; padding: 60px; color: #94a3b8; font-size: 13px;">

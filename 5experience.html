@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience | Cooleafy Cybersecurity Consultation & Electronics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=question_mark" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="stylehome.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    
+    <style>
+        :root {
+            --electric-turquoise: #00f2ff;
+            --dark-slate: #0f172a;
+            --tilt-x: 60deg;
+            --tilt-y: 0deg;
+        }
+
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; margin: 0; }
+
+        /* --- ULTRA HERO (TURQUOISE) --- */
+        .ultra-hero {
+            height: 80vh; width: 100%; background: #ffffff;
+            overflow: hidden; position: relative; display: flex;
+            justify-content: center; align-items: center; perspective: 2000px;
+        }
+
+        .environment-plane {
+            position: absolute; width: 300%; height: 300%;
+            transform: rotateX(var(--tilt-x)) rotateZ(var(--tilt-y));
+            transition: transform 0.2s ease-out; pointer-events: none; z-index: 1;
+        }
+
+        .floor-grid {
+            position: absolute; inset: 0;
+            background-image: 
+                linear-gradient(rgba(0, 242, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.1) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(circle, black 20%, transparent 60%);
+        }
+
+        .pcb-cables {
+            position: absolute; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 h40 l20 -20 h60 l20 20 h60' fill='none' stroke='%2300f2ff' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+            background-size: 400px 400px;
+        }
+
+        .hero-container { z-index: 10; text-align: center; width: 90%; }
+        .tactical-heading {
+            font-size: 5rem; font-weight: 900; color: var(--dark-slate);
+            margin: 0; letter-spacing: -2px; transform: translateY(100%);
+            animation: slideUp 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        @keyframes slideUp { to { transform: translateY(0); } }
+
+        /* --- EXPERIENCE SECTIONS --- */
+        .section-padding { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        .card-basic {
+            background: #fff; padding: 30px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--electric-turquoise);
+        }
+
+        .card-basic h3 { color: var(--dark-slate); margin-top: 0; }
+        .highlight-text { color: var(--electric-turquoise); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
+
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin-top: 15px; }
+        .pill-list li { background: #f0fdff; color: #0891b2; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid #cffafe; }
+
+        .responsibilities { margin-top: 15px; font-size: 0.95rem; color: #555; }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="1home.html">
+            <img src="LOGO-image.PNG" alt="logo" style="width: auto; height: auto; padding: 1px; max-width: 150px;"/>
+          </a>
+        </div>
+
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="1home.html">Home</a>
+            </li>
+            <li>
+              <a href="2about.html">About</a>
+            </li>
+            <li>
+              <a href="4services.html">Services</a>
+              
+            </li>
+            <li>
+              <a href="5experience.html">Experience</a>
+            </li>
+            <li>
+              <a href="3articles.html">Articles</a>
+            </li>
+            <li>
+              <a class="btn" href="tel:+16304460298"> <i class="fas fa-phone"></i> Call </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger Button -->
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="1home.html">Home</a>
+            </li>
+            <li>
+              <a href="2about.html">About</a>
+            </li>
+            <li>
+              <a href="4services.html">Services</a>
+            </li>
+            <li>
+              <a href="5experience.html">Experience</a>
+            </li>
+            <li>
+              <a href="3articles.html">Articles</a>
+            </li>
+            <li>
+              <a class="btn" href="tel:+16304460298"> <i class="fas fa-phone"></i> Call </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="ultra-hero" id="hero-master">
+        <div class="environment-plane">
+            <div class="floor-grid"></div>
+            <div class="pcb-cables"></div>
+        </div>
+        <div class="hero-container">
+            <div class="text-mask">
+                <h1 class="tactical-heading">EXP_LOGS</h1>
+            </div>
+            <p style="color: #64748b; font-weight: 600;">Client-Focused Solutions</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="card-basic" style="margin-bottom: 50px;">
+            <span class="highlight-text">Direct Impact</span>
+            <h2>Client-Facing & Professional Experience</h2>
+            <p>Working directly with clients to translate operational needs and security concerns into practical technical solutions. Focused on infrastructure and supporting decision-making</p>
+            <ul class="pill-list">
+                <li>Plain Language Communication</li>
+                <li>Infrastructure Advising</li>
+                <li>Security Posture</li>
+                <li>Client Support</li>
+            </ul>
+        </div>
+
+        <div class="exp-grid">
+            <div class="card-basic">
+                <h3>Infrastructure & Architecture</h3>
+                <p class="responsibilities">Contributed to secure system designs balancing performance and usability.</p>
+                <ul class="pill-list">
+                    <li>Network Segmentation</li>
+                    <li>Endpoint Placement</li>
+                    <li>Firewall/Router Logic</li>
+                    <li>Scalability Design</li>
+                </ul>
+            </div>
+
+            <div class="card-basic">
+                <h3>Hardware & Deployment</h3>
+                <p class="responsibilities">Handled lifecycle management.</p>
+                <ul class="pill-list">
+                    <li>Imaging/Provisioning</li>
+                    <li>Hardware Diagnostics</li>
+                    <li>Firmware Recovery</li>
+                    <li>Peripheral Support</li>
+                </ul>
+            </div>
+
+            <div class="card-basic">
+                <h3>Linux Administration</h3>
+                <p class="responsibilities">Performed administrative tasks and system monitoring in production environments.</p>
+                <ul class="pill-list">
+                    <li>Permissions Mgmt</li>
+                    <li>Scripting</li>
+                    <li>Log Analysis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #f8fafc; border-radius: 50px 50px 0 0;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Validation & Certifications</h2>
+        <div class="exp-grid">
+            <div class="card-basic">
+                <span class="highlight-text"></span>
+                <h3>Cybersecurity Specialist</h3>
+                <p>Security based topics focusing on threat hunting and tools.</p>
+                <ul class="pill-list">
+                    <li>Cryptography</li>
+                    <li>Threat Intelligence</li>
+                    <li>Vulnerability Scanning</li>
+                </ul>
+            </div>
+            <div class="card-basic">
+                <span class="highlight-text"></span>
+                <h3>CIT CCNA</h3>
+                <p>Routing and network architecture.</p>
+                <ul class="pill-list">
+                    <li>IP Connectivity</li>
+                    <li>OSPF</li>
+                    <li>Network Setup</li>
+                </ul>
+            </div>
+            <div class="card-basic">
+                <span class="highlight-text"></span>
+                <h3>Network Associate</h3>
+                <p>Foundational infrastructure and networking principles.</p>
+                <ul class="pill-list">
+                    <li>OSI Model</li>
+                    <li>IPv4/IPv6 </li>
+                    <li>Hardware Troubleshooting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-black">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="1home.html">
+              <img src="LOGO-image2.png" alt="logo" style="width: 50px; height: 60px;" />
+            </a>
+            <div class="card">
+              <h4>Reach Out!</h4>
+             
+           
+          </div>
+          <div>
+            <h4>CCC&amp;E</h4>
+            <ul>
+              <li><a href="2about.html">About</a></li>
+              <li><a href="4services.html">Our Process</a></li>
+              
+            </ul>
+          </div>
+          <div>
+            <h4>information</h4>
+            <ul>
+              <li><a href="3articles.html">Articles</a></li>
+              <li><a href="5Network.html">Resources</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@cooleafy.info">info@cooleafy.info</a></li>
+              <li><a href="tel:+16304460298">+1(630)446-0298</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer style="text-align:center; padding: 60px;color:rgb(255, 255, 255); background-color: #000000; font-size: 13px;">
+  <p>© 2026 | MSSP</p>
+
+    <script src="main1.js"></script>
+    <script>
+        // Hero Mouse Tilt Effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+            document.documentElement.style.setProperty('--tilt-x', `${60 + (y * 15)}deg`);
+            document.documentElement.style.setProperty('--tilt-y', `${x * 25}deg`);
+        });
+
+        document.querySelectorAll('.has-dropdown > a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                link.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

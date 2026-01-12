@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDS | Command Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --tech-red: #ef4444;
+      --tech-dark: #0f172a;
+      --tech-bg: #f8fafc;
+      --bubble-radius: 40px;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--tech-bg);
+      color: var(--tech-dark);
+      margin: 0;
+      padding-top: 100px; /* Space for fixed nav */
+      line-height: 1.6;
+    }
+
+    /* --- BULLETPROOF NAVBAR --- */
+    #final-nav-shell {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 80px !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      backdrop-filter: blur(10px);
+      z-index: 9999999 !important;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .final-nav-bar {
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+    }
+
+    .final-logo-img { height: 31px; width: auto; }
+
+    .final-nav-desktop { display: flex; align-items: center; gap: 30px; }
+    .final-nav-desktop a { 
+      text-decoration: none; color: #000; font-weight: 700; font-size: 14px; 
+    }
+
+    .final-bubble-link {
+      background: var(--tech-dark); color: #fff !important;
+      padding: 10px 25px; border-radius: 50px;
+      transition: transform 0.3s;
+    }
+    .final-bubble-link:hover { transform: scale(1.05); }
+
+    .final-hamburger {
+      display: none; cursor: pointer; flex-direction: column; gap: 5px;
+    }
+    .final-hamburger span { width: 25px; height: 3px; background: #000; border-radius: 2px; }
+
+    /* --- BUBBLY CONTENT BLOCKS --- */
+    .ids-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      border-radius: 0 0 var(--bubble-radius) var(--bubble-radius);
+      margin-bottom: 40px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .tech-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: var(--bubble-radius);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+      margin-bottom: 30px;
+      border: 1px solid rgba(0,0,0,0.02);
+      transition: transform 0.3s ease;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    h2 i { color: var(--tech-red); }
+
+    /* Grid for Types */
+    .ids-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background: #f1f5f9;
+      padding: 30px;
+      border-radius: 30px;
+      border-left: 8px solid var(--tech-red);
+    }
+
+    /* Interactive List Styles */
+    .bubbly-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .bubbly-list li {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 50px;
+      border: 1px solid #e2e8f0;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bubbly-list li::before {
+      content: '✔';
+      color: #22c55e;
+      font-weight: 900;
+    }
+
+    .impact-section {
+      background: var(--tech-red);
+      color: white;
+      border-radius: var(--bubble-radius);
+      padding: 50px;
+    }
+
+    .impact-section h2 { color: white; }
+    .impact-section li { color: var(--tech-dark); }
+
+    /* Mobile Overlay (Same as before) */
+    #final-mobile-drawer {
+      position: fixed; top: 80px; left: 0; width: 100%;
+      background: #ffffff; display: none;
+      flex-direction: column; z-index: 999999;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    #final-mobile-drawer a { padding: 20px; text-align: center; text-decoration: none; color: #000; font-weight: 800; border-bottom: 1px solid #eee; }
+
+    @media (max-width: 1024px) {
+      .final-nav-desktop { display: none; }
+      .final-hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="final-nav-shell">
+    <div class="final-nav-bar">
+        <div class="final-nav-logo">
+            <a href="1home.html">
+                <img src="LOGO-image.PNG" alt="Logo" class="final-logo-img">
+            </a>
+        </div>
+        <div class="final-nav-desktop">
+            <a href="1home.html">Home</a>
+            <a href="2about.html">About</a>
+            <a href="4services.html">Services</a>
+            <a href="3articles.html">Articles</a>
+            <a href="4support.html" class="final-bubble-link">Initialize Support</a>
+        </div>
+        <div class="final-hamburger" onclick="toggleNavMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <div id="final-mobile-drawer">
+        <a href="1home.html">Home</a>
+        <a href="2about.html">About</a>
+        <a href="4services.html">Services</a>
+        <a href="3articles.html">Articles</a>
+    </div>
+</nav>
+
+<header class="ids-hero">
+  <h1>INTRUSION DETECTION</h1>
+  <p>Monitoring the unseen. Protecting the perimeter.</p>
+</header>
+
+<div class="container">
+  <section class="tech-card">
+    <h2><i class="fas fa-microchip"></i> What Is An IDS?</h2>
+    <p>An Intrusion Detection System (IDS) is your network’s early-warning radar. It continuously scans traffic and system logs to identify suspicious footprints before they turn into full-scale breaches.</p>
+  </section>
+
+  <section class="tech-card">
+    <h2><i class="fas fa-shield-halved"></i> Why Visibility Matters</h2>
+    <p>Modern threats bypass standard firewalls daily. IDS provides the internal eyes needed to catch lateral movements.</p>
+    <ul class="bubbly-list">
+      <li>Unauthorized Access</li>
+      <li>Malware Detection</li>
+      <li>Insider Threat Control</li>
+      <li>Compliance Audits</li>
+    </ul>
+  </section>
+
+  <section class="tech-card">
+    <h2><i class="fas fa-network-wired"></i> Deployment Types</h2>
+    <div class="ids-grid">
+      <div class="grid-item">
+        <h3>NIDS (Network)</h3>
+        <p>Monitors traffic across the entire network for malicious patterns and abnormal behavior.</p>
+      </div>
+      <div class="grid-item">
+        <h3>HIDS (Host)</h3>
+        <p>Embedded on individual systems to watch file changes, system calls, and local security logs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-card">
+    <h2><i class="fas fa-gears"></i> Proper Implementation</h2>
+    <p>Installing software isn't enough. Precision tuning is where cybersecurity meets business strategy.</p>
+    <ul class="bubbly-list">
+      <li>Strategic Placement</li>
+      <li>Activity Baselines</li>
+      <li>Signature Updates</li>
+      <li>SIEM Integration</li>
+      <li>Continuous Tuning</li>
+    </ul>
+  </section>
+
+  <section class="impact-section">
+    <h2><i class="fas fa-chart-line"></i> Business Impact</h2>
+    <p>A proactive defense strategy transforms security from a cost center into a business enabler.</p>
+    <ul class="bubbly-list">
+      <li>Reduced Financial Risk</li>
+      <li>Rapid Incident Response</li>
+      <li>Customer Trust</li>
+      <li>Continuous Operations</li>
+    </ul>
+  </section>
+</div>
+
+<footer style="text-align:center; padding: 40px; color: #64748b;">
+  <p>© 2026 | CCC&E Cybersecurity Frameworks</p>
+</footer>
+
+<script>
+  window.toggleNavMenu = function() {
+    var drawer = document.getElementById('final-mobile-drawer');
+    if (drawer.style.display === 'flex') {
+        drawer.style.display = 'none';
+    } else {
+        drawer.style.display = 'flex';
+    }
+  };
+
+  window.onresize = function() {
+    if (window.innerWidth > 1024) {
+        document.getElementById('final-mobile-drawer').style.display = 'none';
+    }
+  };
+</script>
+
+</body>
+
+</html>
