@@ -142,30 +142,43 @@
 </head>
 <body>
 
-<nav id="final-nav-shell">
-    <div class="final-nav-bar">
-        <div class="final-nav-logo">
-            <a href="1home.html"><img src="LOGO-image.png" alt="Logo" class="final-logo-img"></a>
-        </div>
-        <div class="final-nav-desktop">
-            <a href="1home.html">Home</a>
-            <a href="2about.html">About</a>
-            <a href="4services.html">Services</a>
-            <a href="3articles.html">Articles</a>
-            <a href="4support.html" class="final-bubble-link">Contact Expert</a>
-        </div>
-        <div class="final-hamburger" onclick="toggleNavMenu()">
-            <span></span><span></span><span></span>
-        </div>
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="LOGO-image.png" alt="logo" style="width: auto; height: auto; padding: 1px; max-width: 150px;"/>
+      </a>
     </div>
-    <div id="final-mobile-drawer">
-        <a href="1home.html">Home</a>
-        <a href="2about.html">About</a>
-        <a href="4services.html">Services</a>
-        <a href="3articles.html">Articles</a>
-    </div>
-</nav>
 
+    <div class="main-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2about.html">About</a></li>
+        <li><a href="4services.html">Services</a></li>
+        <li><a href="5experience.html">Experience</a></li>
+        <li><a href="3articles.html">Articles</a></li>
+        <li><a class="btn" href="tel:+16304460298"><i class="fas fa-phone"></i></a></li>
+      </ul>
+    </div>
+
+    <button class="hamburger-button" id="hamburger-btn">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </button>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2about.html">About</a></li>
+        <li><a href="4services.html">Services</a></li>
+        <li><a href="5experience.html">Experience</a></li>
+        <li><a href="3articles.html">Articles</a></li>
+        <li><a class="btn" href="tel:+16304460298"><i class="fas fa-phone"></i> Call</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <header class="grand-hero">
   <h1>TECHNICAL EXPERTISE</h1>
   <p>Validated mastery in Cybersecurity, Network Architecture, and Enterprise Infrastructure Design.</p>
@@ -231,5 +244,6 @@
   </section>
 
 </div>
+
 
 <footer style="text-align:center; padding: 60px; color: #94a3b8; font-size: 13px;">
