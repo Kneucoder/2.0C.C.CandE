@@ -2088,6 +2088,42 @@ section { padding: 80px 5%; border-bottom: 1px solid #eee; }
     100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
 }
 
+/* Base styles for the hamburger container */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Base styles for the three lines */
+.bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #333; /* Change icon color here */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out; /* This makes it move smoothly */
+}
+
+/* ANIMATION: What happens when the "open" class is added */
+
+/* Top bar: move down and rotate */
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+/* Middle bar: fade out */
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* Bottom bar: move up and rotate */
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
 
 
 
