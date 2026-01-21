@@ -325,6 +325,12 @@ function animate() {
 init();
 animate();
 
+const menuIcon = document.getElementById('hamburger-icon');
+
+menuIcon.addEventListener('click', () => {
+    // This toggles the 'open' class on every click
+    menuIcon.classList.toggle('open');
+});
 
 
 
