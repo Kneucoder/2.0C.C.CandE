@@ -325,11 +325,12 @@ function animate() {
 init();
 animate();
 
-const menuIcon = document.getElementById('hamburger-icon');
+const btn = document.getElementById('hamburger-btn');
+const menu = document.getElementById('mobile-menu');
 
-menuIcon.addEventListener('click', () => {
-    // This toggles the 'open' class on every click
-    menuIcon.classList.toggle('open');
+btn.addEventListener('click', () => {
+  btn.classList.toggle('active');
+  menu.classList.toggle('active');
 });
 
 
